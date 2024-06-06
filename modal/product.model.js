@@ -1,4 +1,4 @@
-const { Timestamp } = require("mongodb");
+
 const mongoose = require("mongoose");
 
 const productSchema = mongoose.Schema(
@@ -21,10 +21,10 @@ const productSchema = mongoose.Schema(
     },
   },
   {
-    Timestamp: true,
+    timestamps: true,
   }
 );
 
 const Product = mongoose.model("Product", productSchema)
 
-modules.export = Product;
+module.exports = Product;
