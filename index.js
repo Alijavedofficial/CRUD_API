@@ -71,7 +71,7 @@ app.delete('/api/products/:id', async ( req,res) => {
     }
 })
 
-mongoose.connect("mongodb+srv://alijavedofficial0007:F2YVeyKxElViEgWu@backenddb.d5pyjuz.mongodb.net/Node-Api?retryWrites=true&w=majority&appName=backenddb")
+mongoose.connect(MONGO_URI)
 .then(() => {
     console.log('Connected to database')
 }).catch(() => {
